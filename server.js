@@ -4,6 +4,8 @@ var mongojs = require('mongojs');
 var db = mongojs('caminos',['menuList','chapterList','dictionary']);
 var bodyparser = require('body-parser');
 
+app.set('port', (process.env.PORT || 1338));
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyparser.json());
 
@@ -58,6 +60,3 @@ app.put('/dictionary/:id', function(req,res){
 			res.json(doc);
 	});
 })
-
-app.listen(1337);
-console.log('server running on port 1337')
