@@ -1,0 +1,19 @@
+<div class="headers">
+		<h1>{{header}}</h1>
+	</div>	<!-- end contentheader	-->	 					
+	<div class="content">
+		<ul id='nav' class="list-inline">
+			<li ng-repeat="item in menuList | orderBy:'text'"><a ng-href="{{item.ref}}">{{item.text}}</a></li>
+		</ul>
+		<div  class="content">
+			<nav>
+	  			<ul class="pagination">
+	    			<li><a href="#">A</a></li>
+	    			<li><a href="#">B</a></li>
+				    <li><a href="#">C</a></li>
+				    <li><a href="#">D</a></li>
+				    <li><a href="#">E</a></li>
+	 			 </ul>
+			</nav>
+		</div>
+	</div>	<!-- end content	-->

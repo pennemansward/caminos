@@ -1,0 +1,35 @@
+<div class="headers">
+		<h1>{{header}}</h1>
+	</div>	<!-- end contentheader	-->	 					
+	<div class="content">
+		<ul id='nav' class="list-inline">
+			<li ng-repeat="item in menuList | orderBy:'text'"><a ng-href="{{item.ref}}">{{item.text}}</a></li>
+		</ul>
+			<div class="btn-group" style="margin:10px;">
+                <label class="btn btn-default" ng-click="changelanguage('espagnol')" style="width:100px">
+                    Espagnol <span class="glyphicon"></span>
+                </label>
+                <label class="btn btn-default" ng-click="changelanguage('dutch')" style="width:100px">
+                    Dutch <span class="glyphicon"></span>
+                </label>
+            </div>
+		<div  class="content">
+			<table id="tabelleke" class="table-striped table-bordered table-condensed">
+				<thead>
+					<th>Espagnol</th>
+					<th>Dutch</th>
+					<th>{{nocheck}}</th>
+				</thead>				
+				<tbody>
+					<tr ng-repeat="word in dictionary" class="form-group">
+						<td ng-show="language=='dutch'"><input class="form-control" ng-model="word.espagnol" disabled=""></td>
+						<td ng-show="language=='dutch'"><input class="form-control" ng-model="answer"></td>
+						<td ng-show="language=='dutch'"><button class="btn btn-primary" ng-click="check(word.dutch, answer, $index)" ng-disabled="!answer">Check</button></td>
+						<td ng-show="language=='espagnol'"><input class="form-control" ng-model="answer"></td>
+						<td ng-show="language=='espagnol'"><input class="form-control" ng-model="word.dutch" disabled=""></td>
+						<td ng-show="language=='espagnol'"><button class="btn btn-primary" ng-click="check(word.espagnol, answer, $index)" ng-disabled="!answer">Check</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>	<!-- end content	-->

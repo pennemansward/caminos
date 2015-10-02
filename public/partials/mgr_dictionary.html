@@ -1,0 +1,39 @@
+<div class="headers">
+		<h1>{{header}}</h1>
+	</div>	<!-- end contentheader	-->	 					
+	<div class="content">
+		<ul id='nav' class="list-inline">
+			<li ng-repeat="item in menuList | orderBy:'text'"><a ng-href="{{item.ref}}">{{item.text}}</a></li>
+		</ul>
+		<div  class="content">
+			<nav>
+	  			<ul class="pagination">
+	    			<li ng-repeat="letter in alphabet"><a href="#/mgrdictionary/{{letter}}">{{letter}}</a></li>
+	 			 </ul>
+			</nav>
+			<table class="table-striped table-bordered table-condensed">
+				<thead>
+					<th>Espagnol</th>
+					<th>Dutch</th>
+					<th><span class='badge'>{{dictionary.length}}</span> item(s) available</th>
+					<th></th>
+				</thead>				
+				<tbody>
+					<tr>
+						<td><input class="form-control" ng-model="word.espagnol" placeholder="Espagnol"></td>
+						<td><input class="form-control" ng-model="word.dutch" placeholder="Dutch"></td>
+						<td ng-hide="allowadd"><button class="btn btn-primary" ng-click="clear()">Clear</button></td>
+						<td ng-show="allowadd"><button class="btn btn-primary" ng-click="add()" ng-disabled="!word.espagnol || !word.dutch">Add</button></td>
+						<td><button class="btn btn-primary" ng-click="update()" ng-disabled="!editing">update</button></td>
+					</tr>
+					<tr ng-repeat="word in dictionary  | orderBy:'espagnol'">
+						<td>{{word.espagnol}}</td>
+						<td>{{word.dutch}}</td>
+						<td><button class="btn btn-warning" ng-click="edit(word._id)">edit</button></td>
+						<td><button class="btn btn-danger" ng-click="remove(word._id)">remove</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		{{words}}
+	</div>	<!-- end content	-->

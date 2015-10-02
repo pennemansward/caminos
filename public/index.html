@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="App">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS files -->
+	<link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Allan:bold" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" >
+
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- Angular root scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="scripts/root/angular-route.min.js"></script>
+	<script src="scripts/root/angular-css.min.js"></script>
+	<script src="scripts/root/ui-bootstrap-tpls.min.js"></script>
+	<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+	
+
+
+	<!-- App-based scripts -->
+	<script src="scripts/root/app.js"></script>
+	<script src="scripts/controllers/controllers.js"></script>
+	
+
+	<!--<title> Temporary Monkey </title>-->
+	<title> Caminos </title>
+</head>
+
+<body class="container">
+		<header>
+			<div style="display:block">
+			<table>
+				<tr>
+					<td id="title" colspan="2">
+						<!--TemporaryMonkey-->
+						Caminos
+					</td>
+					<td id="version">
+						Version 1
+					</td>
+				</tr>
+			</table>
+		</div>
+		</header>
+	<div class="row">
+		<div>
+			<div ng-view></div>	
+		</div>
+	</div>
+	<footer>Created By Ward Pennemans</footer>
+</body>

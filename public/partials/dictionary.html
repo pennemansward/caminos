@@ -1,0 +1,34 @@
+<div class="headers">
+		<h1>{{header}}</h1>
+	</div>	<!-- end contentheader	-->	 					
+	<div class="content">
+		<ul id='nav' class="list-inline">
+			<li ng-repeat="item in menuList | orderBy:'text'"><a ng-href="{{item.ref}}">{{item.text}}</a></li>
+		</ul>
+		<div  class="content">
+			<nav>
+	  			<ul class="pagination">
+	    			<li ng-repeat="letter in alphabet"><a href="#/dictionary/{{letter}}">{{letter}}</a></li>
+	 			 </ul>
+			</nav>
+			<table class="table-striped table-bordered table-condensed">
+				<thead>
+					<th><table><tr><td>Espagnol</td><td>Dutch</td></tr></table></th>
+					<th><table><tr><td>Espagnol</td><td>Dutch</td></tr></table></th>
+					<th><table><tr><td>Espagnol</td><td>Dutch</td></tr></table></th>
+				</thead>				
+				<tbody>
+					<tr ng-repeat="words in dictionary">
+						<td ng-repeat="word in words | orderBy:'espagnol'">
+							<table>
+								<tr>
+									<td>{{word.espagnol}}</td>
+									<td>{{word.dutch}}</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>	<!-- end content	-->
