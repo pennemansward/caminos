@@ -59,5 +59,5 @@ app.put('/dictionary/:id', function(req,res){
 	});
 })
 
-app.listen(1337);
-console.log('server running on port 1337')
+app.listen(5000);
+console.log('server running on port 5000')
