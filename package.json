@@ -1,0 +1,29 @@
+{
+  "name": "caminos",
+  "version": "0.1.1",
+  "description": "Spanish course tool",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "1.13.3",
+    "express": "4.13.3",
+    "mongodb": "2.0.42",
+    "mongojs": "1.3.0",
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pennemansward/caminos.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "caminos"
+  ],
+  "license": "MIT"
+}
